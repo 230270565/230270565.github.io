@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/55b8d076-c6d4-4a64-bb9a-fd70604f2008
-
 # Raul Ja'aim Everts
 ### ICT: Applications Development Student
 
@@ -73,3 +69,5 @@ Aspiring tech student looking to gain experience throughout my studies. I strive
 
 - **Mr Regan McLaren** — 084 591 3891
 - **Faadiel Zaindien** — 079 513 5678
+
+https://github.com/user-attachments/assets/55b8d076-c6d4-4a64-bb9a-fd70604f2008
