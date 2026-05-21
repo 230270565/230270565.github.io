@@ -1,7 +1,9 @@
 # Raul Ja'aim Everts
 ### ICT: Applications Development Student
 
-Aspiring tech student looking to gain experience throughout my studies. I strive to learn and apply skills and experience to new projects, whether personal or work related. My goal is always to improve and support my own work.
+Hey there! I'm Raul, a final year Application Development student at the Cape Peninsula University of Technology in Cape Town, South Africa.
+I enjoy constantly learning new things, and right now I'm building my skills across Java, JavaScript, HTML, CSS and React while continuing to sharpen my general development skills. I'm also working towards moving into the Cybersecurity field, with Python, C, C++, Rust and Assembly all on my radar as my next steps in that direction.
+One of my main projects this year is my final year Project module, where my team and I are building a fully functional gym website.
 
 ---
 
@@ -9,7 +11,8 @@ Aspiring tech student looking to gain experience throughout my studies. I strive
 
 - 📧 rauljeverts@gmail.com
 - 📞 061 485 1715
-- 🐙 [github.com/raul-everts](https://github.com/raul-everts)
+- 🐙 Student [github.com/230270565](https://github.com/230270565)
+- 🐙 Personal [github.com/raul-everts](https://github.com/raul-everts)
 - 📍 Cape Town, Western Cape
 
 ---
