@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agile Portfolio | Raul Ja'aim Everts</title>
+  <meta name="description" content="Agile evidence and reflections for the GoldenWay project, PRP3 Assessment 2.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Raul Ja'aim Everts <span>230270565</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="agile.html" aria-current="page">Agile Portfolio</a>
+      <a href="cv.html">CV</a>
+      <a href="interview.html">Interview</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="page-title">
+      <div class="label">PRP370S · Project Presentation 3 · Assessment 2</div>
+      <h1>Agile Portfolio: GoldenWay</h1>
+      <p>Evidence and reflections for the five Agile artefacts from our final-year team project. For each one I show what the artefact is, then reflect on what it meant for my part of the work.</p>
+    </div>
+
+    <div class="agile-layout">
+
+      <aside class="contents">
+        <nav>
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#overview">Project overview</a></li>
+            <li><a href="#charter">Agile Team Charter</a></li>
+            <li><a href="#stories">User Stories and Tasks</a></li>
+            <li><a href="#product">Product Backlog</a></li>
+            <li><a href="#sprint">Sprint Backlog</a></li>
+            <li><a href="#logbook">Agile Logbook</a></li>
+            <li><a href="#workplace">Bringing it together</a></li>
+            <li><a href="#references">References</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <div>
+
+        <!-- ================= OVERVIEW ================= -->
+        <section id="overview" class="artefact">
+          <h2>Project overview</h2>
+          <dl class="facts">
+            <dt>Project</dt><dd>GoldenWay, a mobile-first ticketing and transit app for Golden Arrow commuters</dd>
+            <dt>Team</dt><dd>Group 26, five members, each owning one user role</dd>
+            <dt>My role</dt><dd><strong>Agent</strong>: the support staff who answer commuters in live chat and manage support tickets</dd>
+            <dt>Stack</dt><dd>React, JavaScript, Supabase, SQL, deployed on Vercel</dd>
+            <dt>Method</dt><dd>Weekly sprints, Kanban board on Trello, stand-ups and weekly retrospectives</dd>
+            <dt>Board</dt><dd><a href="https://trello.com/b/xyZiSfZl/goldenway-board-updated" target="_blank" rel="noopener">Team Trello board</a></dd>
+            <!-- TODO: if the app is still live, add it here:
+            <dt>Live app</dt><dd><a href="https://YOUR-VERCEL-LINK">Vercel link</a></dd> -->
+          </dl>
+        </section>
+
+        <!-- ================= 1. CHARTER ================= -->
+        <section id="charter" class="artefact">
+          <h2>1. Agile Team Charter</h2>
+          <p class="purpose">The charter is the team's agreement on why we were building GoldenWay, how we would work, and who owned which part.</p>
+
+          <h3 class="part">Evidence <span>(10%)</span></h3>
+          <p><strong>Product goal:</strong> a deployed, mobile-first app where commuters buy and use Gold Card trips, and each kind of Golden Arrow staff member has their own tools to support that.</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Member</th><th>Responsibility</th></tr></thead>
+              <tbody>
+                <tr><td>Joshua Adams</td><td>Team lead; Commuter and Clerk roles; reviews and merges</td></tr>
+                <tr><td>Matthew Barron</td><td>Admin role</td></tr>
+                <tr><td>Aidan Barends</td><td>Driver role</td></tr>
+                <tr class="mine"><td>Raul Everts (me)</td><td>Agent role: support chat and ticket queue</td></tr>
+                <tr><td>Joshua Bird</td><td>Inspector role (joined August 2026)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <p><strong>Values</strong></p>
+              <ul>
+                <li>Ubuntu</li>
+                <li>Ownership</li>
+                <li>Technical foresight</li>
+                <li>Resilience</li>
+                <li>Ethical data handling</li>
+              </ul>
+            </div>
+            <div>
+              <p><strong>Working agreements</strong></p>
+              <ul>
+                <li>Everyone works on their own branch; nothing is pushed straight to <code>main</code>.</li>
+                <li>Changes go in through pull requests that the lead reviews.</li>
+                <li>Check with the owner before editing a file they're working on.</li>
+                <li>Planning on Tuesdays, stand-ups on class days, a retrospective every week.</li>
+                <li>Database changes go in as migrations, applied before testing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="todo">Check these match your copy of the charter and add anything that mattered to you personally.</div>
+
+          <div class="figures">
+            <!-- TODO: save as assets/img/agile/charter.png then replace this div with:
+                 <figure><img src="assets/img/agile/charter.png" alt="Agile Team Charter"><figcaption>Agile Team Charter</figcaption></figure> -->
+            <div class="img-slot">Screenshot of the charter<br><code>assets/img/agile/charter.png</code></div>
+          </div>
+          <p><a href="assets/docs/Agile_Team_Charter.pdf">Download the team charter (PDF)</a></p>
+
+          <h3 class="part">Reflection <span>(10%)</span></h3>
+          <div class="reflection">
+            <dl>
+              <dt>Context</dt>
+              <dd><div class="todo">The state of the team when the charter was written or updated: the lead change in July, a new member in August.</div></dd>
+              <dt>What I had to do</dt>
+              <dd><div class="todo">What the charter asked of you: owning the Agent role, following the branch and pull request rules.</div></dd>
+              <dt>What I did</dt>
+              <dd><div class="todo">How you actually worked with it, with a specific example.</div></dd>
+              <dt>What came of it</dt>
+              <dd><div class="todo">What having written agreements changed, and what you'd keep doing in a job.</div></dd>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ================= 2. USER STORIES ================= -->
+        <section id="stories" class="artefact">
+          <h2>2. User Stories and Tasks</h2>
+          <p class="purpose">User stories describe a feature from the user's point of view. Each one was broken down into tasks on a Trello card.</p>
+
+          <h3 class="part">Evidence <span>(10%)</span></h3>
+          <p>The stories on my side of the app:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>User story</th><th>Priority</th></tr></thead>
+              <tbody>
+                <tr><td>As an agent, I want to answer commuters' support queries in live chat, so their problems are resolved quickly.</td><td class="nowrap">Must have</td></tr>
+                <tr><td>As an agent, I want to claim, resolve and escalate support tickets from a queue, so every query has an owner.</td><td class="nowrap">Should have</td></tr>
+                <tr><td>As an agent, I want to set my online status, so commuters know when an agent is available to help.</td><td class="nowrap">Could have</td></tr>
+                <tr><td>As a commuter, I want to report a problem with my trip through support chat, so it gets resolved.</td><td class="nowrap">Could have</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Breaking a story into tasks.</strong> Example: the live chat story.</p>
+          <div class="todo">
+            List the real tasks from your Trello card. Something like:
+            <ul>
+              <li>Create the tickets and messages tables with row-level security</li>
+              <li>Build the agent chat screen</li>
+              <li>Show new messages in real time</li>
+              <li>Link a commuter's chat to a ticket</li>
+              <li>Test with a commuter account and an agent account</li>
+            </ul>
+          </div>
+
+          <div class="figures">
+            <div class="img-slot">User stories card on Trello<br><code>assets/img/agile/user-stories.png</code></div>
+            <div class="img-slot">One of your cards with its task checklist<br><code>assets/img/agile/sprint-card.png</code></div>
+          </div>
+
+          <h3 class="part">Reflection <span>(10%)</span></h3>
+          <div class="reflection">
+            <dl>
+              <dt>Context</dt>
+              <dd><div class="todo">The Agent role only came in with the multirole design in August. What did you start from?</div></dd>
+              <dt>What I had to do</dt>
+              <dd><div class="todo">Turn your stories into tasks small enough to finish in a week.</div></dd>
+              <dt>What I did</dt>
+              <dd><div class="todo">How you split them, and anything that turned out harder than expected.</div></dd>
+              <dt>What came of it</dt>
+              <dd><div class="todo">What was delivered, and what writing from the user's side taught you.</div></dd>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ================= 3. PRODUCT BACKLOG ================= -->
+        <section id="product" class="artefact">
+          <h2>3. Product Backlog</h2>
+          <p class="purpose">The product backlog is the full prioritised list of everything the app needed. We used MoSCoW priorities.</p>
+
+          <h3 class="part">Evidence <span>(10%)</span></h3>
+          <div class="two-col">
+            <div>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Priority</th><th>Stories</th></tr></thead>
+                  <tbody>
+                    <tr><td>Must have</td><td class="num">14</td></tr>
+                    <tr><td>Should have</td><td class="num">22</td></tr>
+                    <tr><td>Could have</td><td class="num">12</td></tr>
+                    <tr><td>Won't have (this phase)</td><td class="num">1</td></tr>
+                    <tr><th>Total</th><th class="num">49</th></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="muted small">The one "won't have", QR-code tickets, was replaced by Gold Card verification.</p>
+            </div>
+            <div>
+              <p><strong>How the backlog changed</strong></p>
+              <ul>
+                <li><strong>May 2026:</strong> commuter-only backlog carried over from the previous subject.</li>
+                <li><strong>July 2026:</strong> board reorganised after lecturer feedback.</li>
+                <li><strong>11 Aug 2026:</strong> multirole design added; stories for Agent and the other staff roles put on a second backlog card.</li>
+                <li><strong>Sept 2026:</strong> reprioritised around lecturer check-ins.</li>
+                <li><strong>20 Oct 2026:</strong> feature freeze; items updated to match what was built.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="todo">Add a line on where the Agent stories sat in the backlog and whether any moved priority.</div>
+
+          <div class="figures">
+            <div class="img-slot">The whole Trello board<br><code>assets/img/agile/trello-board.png</code></div>
+            <div class="img-slot">The staff-roles backlog card<br><code>assets/img/agile/product-backlog.png</code></div>
+          </div>
+
+          <h3 class="part">Reflection <span>(10%)</span></h3>
+          <div class="reflection">
+            <dl>
+              <dt>Context</dt>
+              <dd><div class="todo">The backlog started commuter-only and grew when staff roles were added.</div></dd>
+              <dt>What I had to do</dt>
+              <dd><div class="todo">Your part in keeping it accurate for the Agent role.</div></dd>
+              <dt>What I did</dt>
+              <dd><div class="todo">How you decided what the Agent side needed first, and how feedback changed it.</div></dd>
+              <dt>What came of it</dt>
+              <dd><div class="todo">What a prioritised list did for the team when time ran short.</div></dd>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ================= 4. SPRINT BACKLOG ================= -->
+        <section id="sprint" class="artefact">
+          <h2>4. Sprint Backlog</h2>
+          <p class="purpose">The sprint backlog is what the team committed to in each one-week sprint, tracked on Trello.</p>
+
+          <h3 class="part">Evidence <span>(10%)</span></h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Sprint</th><th>Dates</th><th>Team goal</th><th>My work</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td class="nowrap">13–17 Jul</td><td>Wireframes and pitch</td><td><div class="todo"></div></td></tr>
+                <tr><td>2</td><td class="nowrap">20–24 Jul</td><td>Trello board rework</td><td><div class="todo"></div></td></tr>
+                <tr><td>3</td><td class="nowrap">27–31 Jul</td><td>Figma prototype; React chosen</td><td><div class="todo"></div></td></tr>
+                <tr><td>4</td><td class="nowrap">3–7 Aug</td><td>React project set up</td><td><div class="todo"></div></td></tr>
+                <tr><td>5</td><td class="nowrap">11–14 Aug</td><td>Multirole design, database, auth</td><td><div class="todo"></div></td></tr>
+                <tr><td>6</td><td class="nowrap">18–21 Aug</td><td>Database-backed features per role</td><td><div class="todo"></div></td></tr>
+                <tr class="note"><td colspan="4">22 Aug – 14 Sep: campus closed due to protests, then recess</td></tr>
+                <tr><td>7</td><td class="nowrap">15–18 Sep</td><td>Quality pass and supervisor demo</td><td><div class="todo"></div></td></tr>
+                <tr><td>8</td><td class="nowrap">22–25 Sep</td><td>Features for the check-in</td><td><div class="todo"></div></td></tr>
+                <tr><td>9</td><td class="nowrap">28 Sep – 2 Oct</td><td>Deployment prep and final merges</td><td><div class="todo"></div></td></tr>
+                <tr class="note"><td colspan="4">5–16 Oct: no classes; app submitted and each member presented their feature</td></tr>
+                <tr><td>10</td><td class="nowrap">19–20 Oct</td><td>Code-review fixes and feature freeze</td><td><div class="todo"></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="figures">
+            <div class="img-slot">In Progress / Completed lists on Trello<br><code>assets/img/agile/completed.png</code></div>
+            <div class="img-slot">One of your Agent sprint cards<br><code>assets/img/agile/agent-sprint.png</code></div>
+          </div>
+
+          <h3 class="part">Reflection <span>(10%)</span></h3>
+          <div class="reflection">
+            <dl>
+              <dt>Context</dt>
+              <dd><div class="todo">One-week sprints planned on Tuesdays, with a three-week gap in the middle.</div></dd>
+              <dt>What I had to do</dt>
+              <dd><div class="todo">Deliver the Agent features sprint by sprint alongside four other roles.</div></dd>
+              <dt>What I did</dt>
+              <dd><div class="todo">How you planned your share, and what you did when something didn't fit or a merge broke.</div></dd>
+              <dt>What came of it</dt>
+              <dd><div class="todo">Did your work make the feature freeze? What would you plan differently?</div></dd>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ================= 5. LOGBOOK ================= -->
+        <section id="logbook" class="artefact">
+          <h2>5. Agile Logbook</h2>
+          <p class="purpose">My weekly record of stand-ups and retrospectives: what I worked on, what got in the way, and what I changed.</p>
+
+          <h3 class="part">Evidence <span>(10%)</span></h3>
+          <!-- Replace each empty todo cell with your own text. -->
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Week</th><th>Dates</th><th>Worked on</th><th>Blockers</th><th>Retro: keep / change</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td class="nowrap">13–17 Jul</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>2</td><td class="nowrap">20–24 Jul</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>3</td><td class="nowrap">27–31 Jul</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>4</td><td class="nowrap">3–7 Aug</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>5</td><td class="nowrap">11–14 Aug</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>6</td><td class="nowrap">18–21 Aug</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr class="note"><td colspan="5">22 Aug – 14 Sep: campus closed, then recess</td></tr>
+                <tr><td>7</td><td class="nowrap">15–18 Sep</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>8</td><td class="nowrap">22–25 Sep</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr><td>9</td><td class="nowrap">28 Sep – 2 Oct</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+                <tr class="note"><td colspan="5">5–16 Oct: no classes; feature presentations</td></tr>
+                <tr><td>10</td><td class="nowrap">19–20 Oct</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="figures">
+            <div class="img-slot">A page of your logbook<br><code>assets/img/agile/logbook.png</code></div>
+            <div class="img-slot">A weekly retrospective card on Trello<br><code>assets/img/agile/retrospective.png</code></div>
+          </div>
+          <p><a href="assets/docs/Logbook_230270565.pdf">Download my full logbook (PDF)</a></p>
+
+          <h3 class="part">Reflection <span>(10%)</span></h3>
+          <div class="reflection">
+            <dl>
+              <dt>Context</dt>
+              <dd><div class="todo">Keeping a weekly record over the term, including the gaps.</div></dd>
+              <dt>What I had to do</dt>
+              <dd><div class="todo">Log stand-ups and retros as they happened, not all at the end.</div></dd>
+              <dt>What I did</dt>
+              <dd><div class="todo">How you kept it up, and how it helped you pick up after the three-week break.</div></dd>
+              <dt>What came of it</dt>
+              <dd><div class="todo">A pattern you noticed looking back, and what you'd change.</div></dd>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ================= CONNECT ================= -->
+        <section id="workplace" class="workplace">
+          <h2>Bringing it together</h2>
+          <div class="todo">One or two paragraphs linking all five artefacts. What do they show about how you work in a team, and what will you carry into your first job?</div>
+        </section>
+
+        <section id="references">
+          <h2>References</h2>
+          <ul class="refs">
+            <li>Beck, K. <em>et al.</em> (2001) <em>Manifesto for Agile Software Development</em>. Available at: <a href="https://agilemanifesto.org/">https://agilemanifesto.org/</a> (Accessed: 26 October 2026).</li>
+            <li>Cape Peninsula University of Technology (2026) <em>PRP37XS Subject Guide</em>. Cape Town: CPUT.</li>
+            <li>Project Management Institute and Agile Alliance (2017) <em>Agile Practice Guide</em>. Newtown Square, PA: Project Management Institute.</li>
+            <li>Schwaber, K. and Sutherland, J. (2020) <em>The Scrum Guide</em>. Available at: <a href="https://scrumguides.org/">https://scrumguides.org/</a> (Accessed: 26 October 2026).</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Raul Ja'aim Everts · 230270565 · Digital portfolio for Project Presentation 3, CPUT, 2026</div>
+</footer>
+</body>
+</html>

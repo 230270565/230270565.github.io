@@ -1,0 +1,197 @@
+/* Raul Everts — Digital Portfolio (PRP3, CPUT)
+   Plain CSS, no frameworks, no build step. */
+
+:root {
+  --bg: #ffffff;
+  --text: #1c1c1c;
+  --muted: #5f6368;
+  --line: #d9d9d9;
+  --soft: #f4f5f6;
+  --accent: #1d4e89;       /* plain navy */
+  --todo: #fff8db;
+  --todo-line: #c9a227;
+  --max: 1040px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161718;
+    --text: #e6e6e6;
+    --muted: #a0a4a8;
+    --line: #34373a;
+    --soft: #1f2123;
+    --accent: #7fb0e8;
+    --todo: #2b2714;
+    --todo-line: #8c7420;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--accent); }
+h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 .6em; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.1rem; }
+p { margin: 0 0 1em; }
+code { font-family: var(--mono); font-size: .9em; background: var(--soft); padding: 1px 4px; }
+ul, ol { padding-left: 20px; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 12px; top: 12px; background: var(--text); color: var(--bg); padding: 6px 10px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+.muted { color: var(--muted); }
+.small { font-size: .9rem; }
+
+/* ---------- Header ---------- */
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .wrap {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 8px 24px; padding-top: 18px; padding-bottom: 14px;
+}
+.site-name { font-weight: 700; font-size: 1.05rem; color: var(--text); text-decoration: none; }
+.site-name span { font-weight: 400; color: var(--muted); font-size: .9rem; margin-left: 6px; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.nav a { color: var(--muted); text-decoration: none; font-size: .95rem; padding-bottom: 2px; border-bottom: 2px solid transparent; }
+.nav a:hover { color: var(--text); }
+.nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
+
+/* ---------- Page ---------- */
+main { padding: 36px 0 56px; }
+.page-title { padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.page-title .label { font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
+.page-title p { color: var(--muted); max-width: 70ch; margin-bottom: 0; }
+
+section { margin-bottom: 40px; }
+section > h2 { padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+
+.button {
+  display: inline-block; padding: 8px 14px; border: 1px solid var(--accent);
+  color: var(--accent); text-decoration: none; font-size: .95rem; border-radius: 3px;
+}
+.button:hover { background: var(--accent); color: var(--bg); }
+.buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
+
+/* Key/value facts list */
+.facts { display: grid; grid-template-columns: 150px 1fr; gap: 6px 16px; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+@media (max-width: 560px) {
+  .facts { grid-template-columns: 1fr; gap: 0; }
+  .facts dd { margin-bottom: 8px; }
+}
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 700px) { .two-col { grid-template-columns: 1fr; gap: 0; } }
+
+.inline-list { list-style: none; padding: 0; margin: 0; }
+.inline-list li { display: inline; }
+.inline-list li:not(:last-child)::after { content: " · "; color: var(--muted); }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: .94rem; }
+th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; white-space: nowrap; }
+td.nowrap { white-space: nowrap; }
+tr.note td { color: var(--muted); font-style: italic; background: var(--soft); }
+tr.mine td:first-child { font-weight: 600; }
+
+/* ---------- TODO placeholders (search for "todo" in the HTML) ---------- */
+.todo {
+  background: var(--todo);
+  border-left: 3px solid var(--todo-line);
+  padding: 8px 12px;
+  font-size: .92rem;
+  margin: 0 0 12px;
+}
+.todo::before { content: "To fill in: "; font-weight: 700; }
+.todo ul { margin: 6px 0 0; }
+td .todo { margin: 0; }
+
+/* Screenshot slots */
+.figures { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0 16px; }
+@media (max-width: 600px) { .figures { grid-template-columns: 1fr; } }
+figure { margin: 0; }
+figure img { border: 1px solid var(--line); }
+figcaption { font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.img-slot {
+  border: 1px dashed var(--line); background: var(--soft);
+  min-height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  text-align: center; padding: 12px; font-size: .85rem; color: var(--muted);
+}
+.img-slot code { background: none; }
+
+/* ---------- Home ---------- */
+.intro { max-width: 70ch; }
+.project { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.project:first-of-type { padding-top: 0; }
+.project h3 { margin-bottom: 2px; }
+.project .meta { font-size: .88rem; color: var(--muted); margin-bottom: 6px; }
+.project p { margin-bottom: 4px; }
+
+/* ---------- Agile page: sidebar contents + artefacts ---------- */
+.agile-layout { display: grid; grid-template-columns: 200px 1fr; gap: 40px; }
+.contents { font-size: .93rem; }
+.contents nav { position: sticky; top: 20px; }
+.contents h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); border: 0; padding: 0; }
+.contents ol { margin: 0; padding-left: 18px; }
+.contents li { margin-bottom: 6px; }
+.contents a { color: var(--text); text-decoration: none; }
+.contents a:hover { color: var(--accent); text-decoration: underline; }
+@media (max-width: 820px) {
+  .agile-layout { grid-template-columns: 1fr; gap: 0; }
+  .contents { border: 1px solid var(--line); padding: 12px 16px; margin-bottom: 28px; }
+  .contents nav { position: static; }
+}
+
+.artefact { margin-bottom: 56px; scroll-margin-top: 16px; }
+.artefact > h2 { padding-bottom: 6px; border-bottom: 2px solid var(--text); }
+.artefact > .purpose { color: var(--muted); }
+.artefact h3.part {
+  font-size: .95rem; text-transform: uppercase; letter-spacing: .04em;
+  margin: 24px 0 10px; color: var(--accent);
+}
+.artefact h3.part span { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; font-size: .85rem; }
+
+.reflection dl { margin: 0; }
+.reflection dt { font-weight: 700; margin-top: 10px; }
+.reflection dd { margin: 4px 0 0; }
+
+.workplace { border: 1px solid var(--line); padding: 20px; margin-bottom: 40px; }
+
+.refs { font-size: .92rem; }
+.refs li { margin-bottom: 6px; }
+
+/* ---------- CV ---------- */
+.cv-layout { display: grid; grid-template-columns: 1fr 260px; gap: 40px; }
+@media (max-width: 760px) { .cv-layout { grid-template-columns: 1fr; gap: 0; } }
+.cv-side section > h2 { font-size: 1.05rem; }
+.cv-side ul { list-style: none; padding: 0; margin: 0; }
+.cv-side li { margin-bottom: 6px; }
+.entry { margin-bottom: 16px; }
+.entry .head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 12px; }
+.entry .when { color: var(--muted); font-size: .9rem; }
+.entry p { margin: 2px 0 0; color: var(--muted); }
+
+/* ---------- Interview ---------- */
+video { width: 100%; background: #000; display: block; }
+.reflection-block { margin-top: 32px; }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--line); padding: 18px 0; font-size: .88rem; color: var(--muted); }
+
+/* Let wide tables scroll inside their box instead of stretching the page */
+.agile-layout > *, .cv-layout > *, .two-col > * { min-width: 0; }
