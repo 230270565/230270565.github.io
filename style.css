@@ -195,3 +195,12 @@ video { width: 100%; background: #000; display: block; }
 
 /* Let wide tables scroll inside their box instead of stretching the page */
 .agile-layout > *, .cv-layout > *, .two-col > * { min-width: 0; }
+
+/* Logbook weeks */
+.week { border-top: 1px solid var(--line); padding: 14px 0 6px; }
+.week h4 { margin: 0 0 6px; font-size: 1rem; }
+.week h4 span { color: var(--muted); font-weight: 400; font-size: .9rem; margin-left: 6px; }
+.week .facts { grid-template-columns: 110px 1fr; font-size: .94rem; margin-top: 8px; }
+.week.unlogged { color: var(--muted); }
+.gap-note { background: var(--soft); padding: 8px 12px; font-size: .9rem; color: var(--muted); font-style: italic; margin: 6px 0; }
+.reflection-text p:last-child { margin-bottom: 0; }

@@ -28,7 +28,7 @@
     <div class="page-title">
       <div class="label">PRP370S · Project Presentation 3 · Assessment 2</div>
       <h1>Agile Portfolio: GoldenWay</h1>
-      <p>Evidence and reflections for the five Agile artefacts from our final-year team project. For each one I show what the artefact is, then reflect on what it meant for my part of the work.</p>
+      <p>Evidence and reflections for the five Agile artefacts from our final-year team project. For each one I show the evidence, then reflect on what it meant for my part of the work.</p>
     </div>
 
     <div class="agile-layout">
@@ -54,141 +54,120 @@
         <!-- ================= OVERVIEW ================= -->
         <section id="overview" class="artefact">
           <h2>Project overview</h2>
+          <p>Our research in semester 1 showed that Golden Arrow (GABS) commuters lose time queuing at ticket booths to load trips onto their Gold Cards. GoldenWay lets commuters buy and load trips online, while five staff roles support them the way a real GABS operation would.</p>
           <dl class="facts">
-            <dt>Project</dt><dd>GoldenWay, a mobile-first ticketing and transit app for Golden Arrow commuters</dd>
-            <dt>Team</dt><dd>Group 26, five members, each owning one user role</dd>
-            <dt>My role</dt><dd><strong>Agent</strong>: the support staff who answer commuters in live chat and manage support tickets</dd>
-            <dt>Stack</dt><dd>React, JavaScript, Supabase, SQL, deployed on Vercel</dd>
-            <dt>Method</dt><dd>Weekly sprints, Kanban board on Trello, stand-ups and weekly retrospectives</dd>
-            <dt>Board</dt><dd><a href="https://trello.com/b/xyZiSfZl/goldenway-board-updated" target="_blank" rel="noopener">Team Trello board</a></dd>
-            <!-- TODO: if the app is still live, add it here:
-            <dt>Live app</dt><dd><a href="https://YOUR-VERCEL-LINK">Vercel link</a></dd> -->
+            <dt>Team</dt><dd>Group 26, five developers, each owning one app role</dd>
+            <dt>My work</dt><dd>Commuter Home and Support screens (August), then the <strong>Agent</strong> role: the live support chat and the ticket queue where agents claim, resolve and escalate commuter queries</dd>
+            <dt>Stack</dt><dd>React, Tailwind CSS, JavaScript, Supabase (PostgreSQL with row-level security), deployed on Vercel</dd>
+            <dt>Method</dt><dd>One-week sprints, Kanban board on Trello, stand-ups on class days, weekly retrospectives</dd>
+            <dt>Customer</dt><dd>Our lecturer supervisor, who gave feedback at every demo</dd>
+            <dt>Links</dt><dd><a href="https://goldenwayapp.vercel.app/" target="_blank" rel="noopener">Live app</a> · <a href="https://trello.com/b/xyZiSfZl/goldenway-board-updated" target="_blank" rel="noopener">Team Trello board</a> · <a href="Agile_Team_Charter_v2.0.pdf">Team charter (PDF)</a> · <a href="Agile_Logbook_230270565.pdf">My logbook (PDF)</a></dd>
           </dl>
         </section>
 
         <!-- ================= 1. CHARTER ================= -->
         <section id="charter" class="artefact">
           <h2>1. Agile Team Charter</h2>
-          <p class="purpose">The charter is the team's agreement on why we were building GoldenWay, how we would work, and who owned which part.</p>
+          <p class="purpose">The charter is our team's social contract: why we work together, what we value, how we run our sprints and where our boundaries are. We wrote version 1.0 in May for the business idea and replaced it with version 2.0 on 20 October to match how we actually worked during development.</p>
 
           <h3 class="part">Evidence <span>(10%)</span></h3>
-          <p><strong>Product goal:</strong> a deployed, mobile-first app where commuters buy and use Gold Card trips, and each kind of Golden Arrow staff member has their own tools to support that.</p>
+          <p><a class="button" href="Agile_Team_Charter_v2.0.pdf">Open the Agile Team Charter v2.0 (PDF)</a></p>
+
+          <p><strong>Vision:</strong> "To empower working-class commuters and students in Cape Town with a seamless, cashless, and convenient digital transit payment experience, so that no one misses their bus."</p>
+          <p><strong>Product goal for this phase:</strong> a deployed, database-backed app where every role has working features, demonstrated to our lecturer supervisor before the October portfolio submission.</p>
 
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Member</th><th>Responsibility</th></tr></thead>
+              <thead><tr><th>Member</th><th>App role</th><th>Main responsibilities</th></tr></thead>
               <tbody>
-                <tr><td>Joshua Adams</td><td>Team lead; Commuter and Clerk roles; reviews and merges</td></tr>
-                <tr><td>Matthew Barron</td><td>Admin role</td></tr>
-                <tr><td>Aidan Barends</td><td>Driver role</td></tr>
-                <tr class="mine"><td>Raul Everts (me)</td><td>Agent role: support chat and ticket queue</td></tr>
-                <tr><td>Joshua Bird</td><td>Inspector role (joined August 2026)</td></tr>
+                <tr><td>Joshua Adams</td><td>Team Lead; Commuter and Clerk</td><td>Sprint planning and stand-ups, pull request reviews, database schema, authentication, notifications</td></tr>
+                <tr><td>Matthew Barron</td><td>Admin</td><td>Staff management, onboarding approvals, fare catalogue, service alerts</td></tr>
+                <tr><td>Aidan Barends</td><td>Driver</td><td>Starting runs, delay reporting, run timelines, on-time tracking</td></tr>
+                <tr><td>Joshua Bird</td><td>Inspector</td><td>Gold Card verification on tap-on, inspection history</td></tr>
+                <tr class="mine"><td>Raul Everts (me)</td><td>Agent</td><td>Support inbox, live chat, and claiming, resolving and escalating tickets</td></tr>
               </tbody>
             </table>
           </div>
 
           <div class="two-col">
             <div>
-              <p><strong>Values</strong></p>
+              <p><strong>Core values</strong> (based on the CPUT graduate attributes)</p>
               <ul>
-                <li>Ubuntu</li>
-                <li>Ownership</li>
-                <li>Technical foresight</li>
-                <li>Resilience</li>
-                <li>Ethical data handling</li>
+                <li><strong>Ubuntu:</strong> if someone is stuck, we help them before moving on.</li>
+                <li><strong>Respect:</strong> in code reviews we comment on the code, not the person.</li>
+                <li><strong>Transparency:</strong> blockers come up at stand-up, and Trello shows the real state of the work.</li>
+                <li><strong>Accountability:</strong> each member owns their role from design to a working screen.</li>
+                <li><strong>Ethical capability:</strong> simulated payments, no full card numbers stored, test data only, row-level security.</li>
+                <li><strong>Resilience:</strong> a retrospective every week, acting on at least one lesson.</li>
               </ul>
             </div>
             <div>
               <p><strong>Working agreements</strong></p>
               <ul>
-                <li>Everyone works on their own branch; nothing is pushed straight to <code>main</code>.</li>
-                <li>Changes go in through pull requests that the lead reviews.</li>
-                <li>Check with the owner before editing a file they're working on.</li>
-                <li>Planning on Tuesdays, stand-ups on class days, a retrospective every week.</li>
-                <li>Database changes go in as migrations, applied before testing.</li>
+                <li>Stand-ups on class days using the three logbook questions.</li>
+                <li>One-week sprints: planning on Tuesday, retrospective on the last class day.</li>
+                <li>Each member works on their own branch; nobody pushes to <code>main</code>.</li>
+                <li>Pull requests reviewed by the Team Lead, merged one at a time, build checked after each merge.</li>
+                <li>Shared files have one owner; ask before changing them.</li>
+                <li>Every table has row-level security; migrations go live before testing.</li>
+                <li>Can't finish a task? Tell the team on WhatsApp before the deadline, not after.</li>
               </ul>
             </div>
           </div>
 
-          <div class="todo">Check these match your copy of the charter and add anything that mattered to you personally.</div>
-
-          <div class="figures">
-            <!-- TODO: save as assets/img/agile/charter.png then replace this div with:
-                 <figure><img src="assets/img/agile/charter.png" alt="Agile Team Charter"><figcaption>Agile Team Charter</figcaption></figure> -->
-            <div class="img-slot">Screenshot of the charter<br><code>assets/img/agile/charter.png</code></div>
-          </div>
-          <p><a href="assets/docs/Agile_Team_Charter.pdf">Download the team charter (PDF)</a></p>
+          <p><strong>Definition of Done:</strong> a card is done when the feature works against the real database with no hardcoded data, lint and tests pass, the pull request is reviewed and merged, the screen is checked on a mobile layout, and the owner has updated Trello and their logbook.</p>
 
           <h3 class="part">Reflection <span>(10%)</span></h3>
-          <div class="reflection">
-            <dl>
-              <dt>Context</dt>
-              <dd><div class="todo">The state of the team when the charter was written or updated: the lead change in July, a new member in August.</div></dd>
-              <dt>What I had to do</dt>
-              <dd><div class="todo">What the charter asked of you: owning the Agent role, following the branch and pull request rules.</div></dd>
-              <dt>What I did</dt>
-              <dd><div class="todo">How you actually worked with it, with a specific example.</div></dd>
-              <dt>What came of it</dt>
-              <dd><div class="todo">What having written agreements changed, and what you'd keep doing in a job.</div></dd>
-            </dl>
+          <div class="reflection-text">
+            <p>The part of the charter that affected my work most was the rule about branches and shared files. In week 5 a merge pushed the whole frontend folder to GitHub instead of its contents. I had to clone the repository again, move onto my own branch and push my screens from there. After that I was much more careful about what I committed. In week 6 the team agreed that every shared file has one owner. When my Support chat ran off the bottom of the page, I traced it to the shared dashboard layout, so I raised it with the team instead of changing a file that wasn't mine. In week 7 I did the same with the auth context and the shared API file when connecting my chat to the database.</p>
+            <p>Where I fell short was the logbook agreement. The Definition of Done says a card isn't finished until the owner has written about it in their logbook. I didn't keep that up in the busy weeks at the end of the project, so my ticket queue work isn't recorded properly even though I built it. In a job I'd want the same kind of written agreement. It meant nobody had to guess who owned what, and when something broke, the rules told us who to talk to instead of who to blame.</p>
           </div>
         </section>
 
         <!-- ================= 2. USER STORIES ================= -->
         <section id="stories" class="artefact">
           <h2>2. User Stories and Tasks</h2>
-          <p class="purpose">User stories describe a feature from the user's point of view. Each one was broken down into tasks on a Trello card.</p>
+          <p class="purpose">A user story describes a feature from the end user's point of view. On our board each story was prioritised with MoSCoW and broken into tasks.</p>
 
           <h3 class="part">Evidence <span>(10%)</span></h3>
-          <p>The stories on my side of the app:</p>
+          <p>The stories I owned on the Agent side of the app:</p>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>User story</th><th>Priority</th></tr></thead>
+              <thead><tr><th>User story</th><th>Priority</th><th>Status</th></tr></thead>
               <tbody>
-                <tr><td>As an agent, I want to answer commuters' support queries in live chat, so their problems are resolved quickly.</td><td class="nowrap">Must have</td></tr>
-                <tr><td>As an agent, I want to claim, resolve and escalate support tickets from a queue, so every query has an owner.</td><td class="nowrap">Should have</td></tr>
-                <tr><td>As an agent, I want to set my online status, so commuters know when an agent is available to help.</td><td class="nowrap">Could have</td></tr>
-                <tr><td>As a commuter, I want to report a problem with my trip through support chat, so it gets resolved.</td><td class="nowrap">Could have</td></tr>
+                <tr><td>As an agent, I want to answer commuters' support queries in live chat, so their problems are resolved quickly.</td><td class="nowrap">Must have</td><td>Done</td></tr>
+                <tr><td>As an agent, I want to claim, resolve and escalate support tickets from a queue, so every query has an owner.</td><td class="nowrap">Should have</td><td>Done</td></tr>
+                <tr><td>As an agent, I want to set my online status, so commuters know when an agent is available to help.</td><td class="nowrap">Could have</td><td>Done</td></tr>
+                <tr><td>As a commuter, I want to report a problem with my trip through support chat, so it gets resolved.</td><td class="nowrap">Could have</td><td>Done</td></tr>
               </tbody>
             </table>
           </div>
 
-          <p><strong>Breaking a story into tasks.</strong> Example: the live chat story.</p>
-          <div class="todo">
-            List the real tasks from your Trello card. Something like:
-            <ul>
-              <li>Create the tickets and messages tables with row-level security</li>
-              <li>Build the agent chat screen</li>
-              <li>Show new messages in real time</li>
-              <li>Link a commuter's chat to a ticket</li>
-              <li>Test with a commuter account and an agent account</li>
-            </ul>
-          </div>
+          <p><strong>How the live chat story became tasks</strong> (from my logbook):</p>
+          <ol>
+            <li>Break the Figma Support mockup into parts: message thread, send box and call view <span class="muted small">(5 Aug)</span></li>
+            <li>Build the Support screen with a working send button and a call view with timer, mute and speaker <span class="muted small">(12 Aug)</span></li>
+            <li>Convert it to the project's Tailwind styling and add the <code>/support</code> route <span class="muted small">(13 Aug)</span></li>
+            <li>Make it work inside the shared dashboard layout without a second nav bar <span class="muted small">(14 Aug)</span></li>
+            <li>Turn it into an agent chat: thread layout, sending messages, scrolling to the newest message <span class="muted small">(19 Aug)</span></li>
+            <li>Test with long conversations and compare against the mockup <span class="muted small">(20 Aug)</span></li>
+            <li>Learn the team's Supabase pattern (client, rpc calls, auth context) <span class="muted small">(16 Sep)</span></li>
+            <li>Connect the chat to the support tickets and ticket messages tables <span class="muted small">(18 Sep onwards)</span></li>
+          </ol>
 
-          <div class="figures">
-            <div class="img-slot">User stories card on Trello<br><code>assets/img/agile/user-stories.png</code></div>
-            <div class="img-slot">One of your cards with its task checklist<br><code>assets/img/agile/sprint-card.png</code></div>
-          </div>
+          <p><a href="https://trello.com/c/h903LTtg/1-product-backlog-multirole-staff-roles" target="_blank" rel="noopener">Staff-role user stories on Trello</a> · <a href="https://trello.com/b/xyZiSfZl/goldenway-board-updated" target="_blank" rel="noopener">Full Trello board</a></p>
 
           <h3 class="part">Reflection <span>(10%)</span></h3>
-          <div class="reflection">
-            <dl>
-              <dt>Context</dt>
-              <dd><div class="todo">The Agent role only came in with the multirole design in August. What did you start from?</div></dd>
-              <dt>What I had to do</dt>
-              <dd><div class="todo">Turn your stories into tasks small enough to finish in a week.</div></dd>
-              <dt>What I did</dt>
-              <dd><div class="todo">How you split them, and anything that turned out harder than expected.</div></dd>
-              <dt>What came of it</dt>
-              <dd><div class="todo">What was delivered, and what writing from the user's side taught you.</div></dd>
-            </dl>
+          <div class="reflection-text">
+            <p>My first real task breakdown was the Home and Support screens in week 4. I split each Figma mockup into sections (header, rides card, current pass, recent activity) and built them one at a time. That made a big screen manageable. But I'd only broken the work down by what it looked like, not by how it had to fit into the project. I built both screens in plain CSS with their own bottom navigation, then found the project used Tailwind and a shared dashboard layout. Both screens had to be reworked.</p>
+            <p>When I was given the agent live chat in week 6, the user story kept me focused on what mattered: an agent answering a commuter quickly. The task that took longest was connecting the chat to real data. I first had to understand how the rest of the team called Supabase, so my code would follow the same pattern. The ticket queue story, "so every query has an owner", made it clear the chat on its own wasn't enough: a ticket had to belong to an agent and move between states. Next time I'd add "check how the existing code does it" as the first task on every card, before any building starts.</p>
           </div>
         </section>
 
         <!-- ================= 3. PRODUCT BACKLOG ================= -->
         <section id="product" class="artefact">
           <h2>3. Product Backlog</h2>
-          <p class="purpose">The product backlog is the full prioritised list of everything the app needed. We used MoSCoW priorities.</p>
+          <p class="purpose">The product backlog is the prioritised list of everything GoldenWay needed. Our lecturer acted as the customer, so the order also followed what had to be shown at each check-in.</p>
 
           <h3 class="part">Evidence <span>(10%)</span></h3>
           <div class="two-col">
@@ -210,143 +189,167 @@
             <div>
               <p><strong>How the backlog changed</strong></p>
               <ul>
-                <li><strong>May 2026:</strong> commuter-only backlog carried over from the previous subject.</li>
-                <li><strong>July 2026:</strong> board reorganised after lecturer feedback.</li>
-                <li><strong>11 Aug 2026:</strong> multirole design added; stories for Agent and the other staff roles put on a second backlog card.</li>
-                <li><strong>Sept 2026:</strong> reprioritised around lecturer check-ins.</li>
-                <li><strong>20 Oct 2026:</strong> feature freeze; items updated to match what was built.</li>
+                <li><strong>May 2026:</strong> commuter-only backlog from the semester 1 business idea.</li>
+                <li><strong>21–24 Jul:</strong> board reworked after lecturer feedback.</li>
+                <li><strong>11 Aug:</strong> multirole design agreed. Staff-role stories, including the Agent ones, added on a second backlog card.</li>
+                <li><strong>18 Aug:</strong> work split by role; I took the Agent stories.</li>
+                <li><strong>Sept:</strong> reprioritised around the 17 September integration demo, moving simulated features onto the real database.</li>
+                <li><strong>20 Oct:</strong> feature freeze; items updated to match what was built.</li>
               </ul>
             </div>
           </div>
-          <div class="todo">Add a line on where the Agent stories sat in the backlog and whether any moved priority.</div>
-
-          <div class="figures">
-            <div class="img-slot">The whole Trello board<br><code>assets/img/agile/trello-board.png</code></div>
-            <div class="img-slot">The staff-roles backlog card<br><code>assets/img/agile/product-backlog.png</code></div>
-          </div>
+          <p><a href="https://trello.com/b/xyZiSfZl/goldenway-board-updated" target="_blank" rel="noopener">View the product backlog on Trello</a></p>
 
           <h3 class="part">Reflection <span>(10%)</span></h3>
-          <div class="reflection">
-            <dl>
-              <dt>Context</dt>
-              <dd><div class="todo">The backlog started commuter-only and grew when staff roles were added.</div></dd>
-              <dt>What I had to do</dt>
-              <dd><div class="todo">Your part in keeping it accurate for the Agent role.</div></dd>
-              <dt>What I did</dt>
-              <dd><div class="todo">How you decided what the Agent side needed first, and how feedback changed it.</div></dd>
-              <dt>What came of it</dt>
-              <dd><div class="todo">What a prioritised list did for the team when time ran short.</div></dd>
-            </dl>
+          <div class="reflection-text">
+            <p>The backlog I started with in August was the commuter one, and my Support screen was really a mockup: a chat thread and a call view with nothing behind them. When the team made GoldenWay multirole on 11 August, that screen gained a new purpose, because there was now an Agent on the other side of the chat. Seeing the Agent stories next to each other with their priorities told me what order to work in. Live chat was the Must have, so it came first. The ticket queue was a Should have and followed once the chat worked.</p>
+            <p>The priorities mattered most after the campus closure. We came back on 15 September with two days to go before the integration demo, and parts of the app, my chat included, were still simulated. Because the backlog was ordered, I didn't have to decide what to work on. I spent those days learning the team's database structure and connecting the chat, because that was the highest-priority thing on my side that wasn't real yet. I'd use a prioritised backlog the same way at work: as a way to stop guessing when time runs out.</p>
           </div>
         </section>
 
         <!-- ================= 4. SPRINT BACKLOG ================= -->
         <section id="sprint" class="artefact">
           <h2>4. Sprint Backlog</h2>
-          <p class="purpose">The sprint backlog is what the team committed to in each one-week sprint, tracked on Trello.</p>
+          <p class="purpose">Each one-week sprint started with planning on Tuesday, where we picked cards from the product backlog and agreed who owned each one. Cards moved across the Trello board from Product Backlog to In Progress to Completed.</p>
 
           <h3 class="part">Evidence <span>(10%)</span></h3>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Sprint</th><th>Dates</th><th>Team goal</th><th>My work</th></tr></thead>
+              <thead><tr><th>Sprint</th><th>Dates</th><th>Team sprint goal</th><th>My work</th></tr></thead>
               <tbody>
-                <tr><td>1</td><td class="nowrap">13–17 Jul</td><td>Wireframes and pitch</td><td><div class="todo"></div></td></tr>
-                <tr><td>2</td><td class="nowrap">20–24 Jul</td><td>Trello board rework</td><td><div class="todo"></div></td></tr>
-                <tr><td>3</td><td class="nowrap">27–31 Jul</td><td>Figma prototype; React chosen</td><td><div class="todo"></div></td></tr>
-                <tr><td>4</td><td class="nowrap">3–7 Aug</td><td>React project set up</td><td><div class="todo"></div></td></tr>
-                <tr><td>5</td><td class="nowrap">11–14 Aug</td><td>Multirole design, database, auth</td><td><div class="todo"></div></td></tr>
-                <tr><td>6</td><td class="nowrap">18–21 Aug</td><td>Database-backed features per role</td><td><div class="todo"></div></td></tr>
+                <tr><td>1</td><td class="nowrap">13–17 Jul</td><td>Wireframes and GoldenWay pitch</td><td>Researched Golden Arrow's ticketing problems; wrote my section of the pitch</td></tr>
+                <tr><td>2</td><td class="nowrap">20–24 Jul</td><td>Rework the Trello backlog after feedback</td><td class="muted">Not logged</td></tr>
+                <tr><td>3</td><td class="nowrap">27–31 Jul</td><td>Figma prototype; React chosen</td><td>Presented my prototype screens; applied lecturer feedback</td></tr>
+                <tr><td>4</td><td class="nowrap">3–7 Aug</td><td>React project set up</td><td>Assigned Home and Support screens; built the Home screen</td></tr>
+                <tr><td>5</td><td class="nowrap">11–14 Aug</td><td>Multirole design and database schema</td><td>Built the Support screen; converted both screens to Tailwind; added routes; moved to my own branch</td></tr>
+                <tr><td>6</td><td class="nowrap">18–21 Aug</td><td>Database-backed features per role</td><td>Given the Agent role; built the agent chat view; wrote the solution architecture summary</td></tr>
                 <tr class="note"><td colspan="4">22 Aug – 14 Sep: campus closed due to protests, then recess</td></tr>
-                <tr><td>7</td><td class="nowrap">15–18 Sep</td><td>Quality pass and supervisor demo</td><td><div class="todo"></div></td></tr>
-                <tr><td>8</td><td class="nowrap">22–25 Sep</td><td>Features for the check-in</td><td><div class="todo"></div></td></tr>
-                <tr><td>9</td><td class="nowrap">28 Sep – 2 Oct</td><td>Deployment prep and final merges</td><td><div class="todo"></div></td></tr>
-                <tr class="note"><td colspan="4">5–16 Oct: no classes; app submitted and each member presented their feature</td></tr>
-                <tr><td>10</td><td class="nowrap">19–20 Oct</td><td>Code-review fixes and feature freeze</td><td><div class="todo"></div></td></tr>
+                <tr><td>7</td><td class="nowrap">15–18 Sep</td><td>Integration demo (17 Sep)</td><td>Learned the Supabase structure; started connecting chat to the ticket tables</td></tr>
+                <tr><td>8</td><td class="nowrap">22–25 Sep</td><td>Features for the check-in</td><td rowspan="2">Ticket queue: claiming, resolving and escalating tickets <span class="muted small">(not logged day by day)</span></td></tr>
+                <tr><td>9</td><td class="nowrap">28 Sep – 2 Oct</td><td>Deployment prep and branch merges</td></tr>
+                <tr class="note"><td colspan="4">5–16 Oct: no classes; app deployed to Vercel and each member presented their feature</td></tr>
+                <tr><td>10</td><td class="nowrap">19–20 Oct</td><td>Code review fixes and feature freeze</td><td class="muted">Not logged</td></tr>
               </tbody>
             </table>
           </div>
-
-          <div class="figures">
-            <div class="img-slot">In Progress / Completed lists on Trello<br><code>assets/img/agile/completed.png</code></div>
-            <div class="img-slot">One of your Agent sprint cards<br><code>assets/img/agile/agent-sprint.png</code></div>
-          </div>
+          <p><a href="https://trello.com/b/xyZiSfZl/goldenway-board-updated" target="_blank" rel="noopener">View the sprint cards on Trello</a></p>
 
           <h3 class="part">Reflection <span>(10%)</span></h3>
-          <div class="reflection">
-            <dl>
-              <dt>Context</dt>
-              <dd><div class="todo">One-week sprints planned on Tuesdays, with a three-week gap in the middle.</div></dd>
-              <dt>What I had to do</dt>
-              <dd><div class="todo">Deliver the Agent features sprint by sprint alongside four other roles.</div></dd>
-              <dt>What I did</dt>
-              <dd><div class="todo">How you planned your share, and what you did when something didn't fit or a merge broke.</div></dd>
-              <dt>What came of it</dt>
-              <dd><div class="todo">Did your work make the feature freeze? What would you plan differently?</div></dd>
-            </dl>
+          <div class="reflection-text">
+            <p>Sprint 5 taught me the most about planning. On the Tuesday I planned to build the Support screen. I did build it, but most of the sprint went on things I hadn't planned: converting both screens from plain CSS to Tailwind, removing the duplicate navigation, and recovering from the merge that pushed the whole frontend folder. The work was still done by Friday, but only because I gave up the polish I'd meant to do. My sprint plan had only counted building new things, not fitting them into everyone else's code.</p>
+            <p>Sprint 6 showed a different problem: dependency. My chat ran off the page because of the shared layout, and I could only fully test my screens once other people's work had been merged. Then the three-week closure split the project in half, and sprint 7 had to start with catching up on how the project had changed. If I planned these sprints again, I'd keep a day free in each one for merging and fixing. I'd also bring up dependencies at planning instead of finding them mid-week.</p>
           </div>
         </section>
 
         <!-- ================= 5. LOGBOOK ================= -->
         <section id="logbook" class="artefact">
           <h2>5. Agile Logbook</h2>
-          <p class="purpose">My weekly record of stand-ups and retrospectives: what I worked on, what got in the way, and what I changed.</p>
+          <p class="purpose">On class days (Tuesday to Friday) I answered the three stand-up questions: what I completed, what I planned next, and what was blocking me. Below is a summary of each week with its retrospective; the full daily entries are in the PDF.</p>
 
           <h3 class="part">Evidence <span>(10%)</span></h3>
-          <!-- Replace each empty todo cell with your own text. -->
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Week</th><th>Dates</th><th>Worked on</th><th>Blockers</th><th>Retro: keep / change</th></tr></thead>
-              <tbody>
-                <tr><td>1</td><td class="nowrap">13–17 Jul</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>2</td><td class="nowrap">20–24 Jul</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>3</td><td class="nowrap">27–31 Jul</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>4</td><td class="nowrap">3–7 Aug</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>5</td><td class="nowrap">11–14 Aug</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>6</td><td class="nowrap">18–21 Aug</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr class="note"><td colspan="5">22 Aug – 14 Sep: campus closed, then recess</td></tr>
-                <tr><td>7</td><td class="nowrap">15–18 Sep</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>8</td><td class="nowrap">22–25 Sep</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr><td>9</td><td class="nowrap">28 Sep – 2 Oct</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-                <tr class="note"><td colspan="5">5–16 Oct: no classes; feature presentations</td></tr>
-                <tr><td>10</td><td class="nowrap">19–20 Oct</td><td><div class="todo"></div></td><td><div class="todo"></div></td><td><div class="todo"></div></td></tr>
-              </tbody>
-            </table>
+          <p><a class="button" href="Agile_Logbook_230270565.pdf">Open my full Agile Logbook (PDF)</a></p>
+
+          <div class="week">
+            <h4>Week 1 <span>14–17 July · Pitch</span></h4>
+            <p>Researched Golden Arrow's current ticketing limitations as background for the pitch, wrote my section, and handed it in to be compiled into the final deck.</p>
+            <dl class="facts">
+              <dt>Went well</dt><dd>My section was finished and handed in before the pitch.</dd>
+              <dt>To improve</dt><dd>Sections overlapped and had to be reordered after they were combined.</dd>
+              <dt>Action</dt><dd>Agree the structure of shared work before splitting it up.</dd>
+            </dl>
           </div>
 
-          <div class="figures">
-            <div class="img-slot">A page of your logbook<br><code>assets/img/agile/logbook.png</code></div>
-            <div class="img-slot">A weekly retrospective card on Trello<br><code>assets/img/agile/retrospective.png</code></div>
+          <div class="week unlogged">
+            <h4>Week 2 <span>20–24 July · Trello rework</span></h4>
+            <p>Not logged.</p>
           </div>
-          <p><a href="assets/docs/Logbook_230270565.pdf">Download my full logbook (PDF)</a></p>
+
+          <div class="week">
+            <h4>Week 3 <span>28–31 July · Figma prototype</span></h4>
+            <p>Planned and presented my screens of the Figma prototype, applied the lecturer's feedback, and took part in choosing React for development.</p>
+            <dl class="facts">
+              <dt>Went well</dt><dd>Prototype presented and feedback applied within the week.</dd>
+              <dt>To improve</dt><dd>Keeping my designs consistent with the rest of the group's.</dd>
+              <dt>Action</dt><dd>Set up my development environment before coding starts.</dd>
+            </dl>
+          </div>
+
+          <div class="week">
+            <h4>Week 4 <span>4–7 August · Home screen</span></h4>
+            <p>Assigned the Home and Support screens. Broke the Figma mockups into sections and built most of the Home screen: rides card, stats, current pass progress bar and recent activity in rands.</p>
+            <dl class="facts">
+              <dt>Went well</dt><dd>Splitting the mockup into sections made the screen quick to build.</dd>
+              <dt>To improve</dt><dd>I didn't check the project's structure and styling before building.</dd>
+              <dt>Action</dt><dd>Look at how existing screens are built before starting a new one.</dd>
+            </dl>
+          </div>
+
+          <div class="week">
+            <h4>Week 5 <span>11–14 August · Support screen and rework</span></h4>
+            <p>Multirole design agreed. Built the Support screen (chat thread and call view), converted both screens to Tailwind, added routing, fixed a double nav bar, and moved to my own branch after a bad merge.</p>
+            <dl class="facts">
+              <dt>Went well</dt><dd>Both screens matched the team's styling and worked from login by Friday.</dd>
+              <dt>To improve</dt><dd>Plain CSS meant redoing both screens, and the merge problem cost time.</dd>
+              <dt>Action</dt><dd>Work only on my own branch and check what I commit.</dd>
+            </dl>
+          </div>
+
+          <div class="week">
+            <h4>Week 6 <span>18–21 August · Agent live chat</span></h4>
+            <p>Given the Agent role at sprint planning. Built the agent chat view (thread, sending, scroll to newest), finished the solution architecture summary, and reported a layout bug in a shared file.</p>
+            <dl class="facts">
+              <dt>Went well</dt><dd>Chat view working; navigation still intact after the team's merges.</dd>
+              <dt>To improve</dt><dd>I was blocked waiting on shared layout and backend work.</dd>
+              <dt>Action</dt><dd>Raise dependencies at planning, not mid-week.</dd>
+            </dl>
+          </div>
+
+          <div class="gap-note">22 August – 14 September: campus closed due to protests, then recess. No classes or stand-ups.</div>
+
+          <div class="week">
+            <h4>Week 7 <span>15–18 September · Connecting to Supabase</span></h4>
+            <p>Reviewed the team's new Supabase structure (API, context, migrations), learned how existing screens call the database, attended the integration demo, and started connecting the chat to the support ticket tables.</p>
+            <dl class="facts">
+              <dt>Went well</dt><dd>Followed the team's database pattern instead of inventing my own.</dd>
+              <dt>To improve</dt><dd>My chat was still simulated at the demo.</dd>
+              <dt>Action</dt><dd>Finish and test the chat end to end before adding anything new.</dd>
+            </dl>
+          </div>
+
+          <div class="week unlogged">
+            <h4>Weeks 8–9 <span>22 September – 2 October</span></h4>
+            <p>Not logged day by day. During these weeks I built the ticket queue, where agents claim, resolve and escalate support tickets.</p>
+          </div>
+
+          <div class="gap-note">5 – 16 October: no classes. App deployed to Vercel; each member presented their feature.</div>
+
+          <div class="week unlogged">
+            <h4>Week 10 <span>19–20 October · Feature freeze</span></h4>
+            <p>Not logged.</p>
+          </div>
 
           <h3 class="part">Reflection <span>(10%)</span></h3>
-          <div class="reflection">
-            <dl>
-              <dt>Context</dt>
-              <dd><div class="todo">Keeping a weekly record over the term, including the gaps.</div></dd>
-              <dt>What I had to do</dt>
-              <dd><div class="todo">Log stand-ups and retros as they happened, not all at the end.</div></dd>
-              <dt>What I did</dt>
-              <dd><div class="todo">How you kept it up, and how it helped you pick up after the three-week break.</div></dd>
-              <dt>What came of it</dt>
-              <dd><div class="todo">A pattern you noticed looking back, and what you'd change.</div></dd>
-            </dl>
+          <div class="reflection-text">
+            <p>My logbook is most detailed for weeks 4 to 7, and those are the weeks I can best explain now. It shows the same blocker coming back in different forms: in week 4 I wasn't sure my screens would fit the project, in week 5 they didn't (wrong styling, a second nav bar), in week 6 I was waiting on shared files, and in week 7 I was learning a structure that had changed while campus was closed. Read together, the entries show I kept building before checking how my work connected to everyone else's. I only noticed that pattern by reading the log back.</p>
+            <p>The logbook also helped me restart after the closure. On 15 September my first entry was about reviewing what the team had built, and it listed exactly what was still missing on my side. That told me where to begin. My weakness is that I stopped logging when the project got busiest. Weeks 8 to 10, when I built the ticket queue, have no entries, and that's the work I most needed a record of. I treated the logbook as admin rather than part of the work. Next time I'd write a few lines at the end of each class day, because two minutes on the day is easier than trying to remember a month later.</p>
           </div>
         </section>
 
         <!-- ================= CONNECT ================= -->
         <section id="workplace" class="workplace">
           <h2>Bringing it together</h2>
-          <div class="todo">One or two paragraphs linking all five artefacts. What do they show about how you work in a team, and what will you carry into your first job?</div>
+          <p>Looking across the charter, user stories, backlogs and logbook, the main thing I take away is that on a team, how my work connects to everyone else's matters as much as the work itself. The Home and Support screens I built in August looked right but didn't fit the project, and my chat couldn't be finished until shared layout and backend work landed. Each artefact helped with a different part of that. The charter told me who owned what, the stories and backlog told me what to build first, and the sprint board showed what everyone else was doing.</p>
+          <p>In my first job I'll start every task by looking at how the existing code is done. I'll raise dependencies early, keep to my own branch, and ask before touching a shared file. I'll also keep a short daily record of my work. When something goes wrong or I need to explain what I've done, that record is the evidence, and this project showed me what it's like not to have it for the weeks that mattered most.</p>
         </section>
 
         <section id="references">
           <h2>References</h2>
           <ul class="refs">
-            <li>Beck, K. <em>et al.</em> (2001) <em>Manifesto for Agile Software Development</em>. Available at: <a href="https://agilemanifesto.org/">https://agilemanifesto.org/</a> (Accessed: 26 October 2026).</li>
+            <li>Beck, K. <em>et al.</em> (2001) <em>Manifesto for Agile Software Development</em>. Available at: <a href="https://agilemanifesto.org/">https://agilemanifesto.org/</a> (Accessed: 28 October 2026).</li>
             <li>Cape Peninsula University of Technology (2026) <em>PRP37XS Subject Guide</em>. Cape Town: CPUT.</li>
+            <li>Group 26 (2026) <em>Agile Team Charter v2.0: GoldenWay</em>. Cape Town: CPUT.</li>
             <li>Project Management Institute and Agile Alliance (2017) <em>Agile Practice Guide</em>. Newtown Square, PA: Project Management Institute.</li>
-            <li>Schwaber, K. and Sutherland, J. (2020) <em>The Scrum Guide</em>. Available at: <a href="https://scrumguides.org/">https://scrumguides.org/</a> (Accessed: 26 October 2026).</li>
+            <li>Schwaber, K. and Sutherland, J. (2020) <em>The Scrum Guide</em>. Available at: <a href="https://scrumguides.org/">https://scrumguides.org/</a> (Accessed: 28 October 2026).</li>
           </ul>
         </section>
 
